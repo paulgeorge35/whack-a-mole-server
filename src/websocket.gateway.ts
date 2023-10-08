@@ -160,7 +160,6 @@ export class GameGateway implements OnGatewayInit {
       this.data.gameTime % 500 === 0 &&
       this.data.lastClick - this.data.gameTime >= 500
     ) {
-      console.log('HARD', this.data.gameTime);
       this.server.emit('gameStarted', {
         mole: this.getNewMoleIndex(),
       });
@@ -171,7 +170,6 @@ export class GameGateway implements OnGatewayInit {
       this.data.gameTime % 1000 === 0 &&
       this.data.lastClick - this.data.gameTime >= 1000
     ) {
-      console.log('MEDIUM', this.data.gameTime);
       this.server.emit('gameStarted', {
         mole: this.getNewMoleIndex(),
       });
@@ -181,7 +179,6 @@ export class GameGateway implements OnGatewayInit {
       this.data.gameTime % 2000 === 0 &&
       this.data.lastClick - this.data.gameTime >= 2000
     ) {
-      console.log('EASY', this.data.gameTime);
       this.server.emit('gameStarted', {
         mole: this.getNewMoleIndex(),
       });
